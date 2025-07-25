@@ -1,0 +1,57 @@
+!!!Django projesini başlatmak için terminalde
+django-admin startproject django_project(projenin ismi) komutunu kullanıyoruz.
+Bu komut ile django projesi oluşturduk.
+
+!!!Djangonun bilgisayarda çalışıp çalışmadığına bakmak için!!!
+    python manage.py runserver komutunu kullanıyoruz.
+    eğer 8000 portunda bir sonuç dönüyorsa djangonun çalışması başarılıdır.
+    o linke gidip başlattığınız projeye bakabilirsiniz.
+
+**Django projeleri scaleable bir şekilde çalışır. 
+    Altında bir çok app çalışabilir.
+***  App oluşturmak için terminalde  ***
+python manage.py startapp app_name komutunu kullanıyoruz.
+proje geliştirilirken genel olarak app klasöründe çalışılır.
+
+ÖNEMLİ!!!
+Model view template: Kullanıcılar  (örneğin bir web sitesinde  kullanıcının gördüğü arayüz html css js ) bu görülen arayüze template denir.
+(djangoda)
+viewde (öngörünümde html dosyasını fonksiyon içinde döndürücez.)
+view.py url ile birlikte çalışır. Burada ana python kodlarımız bulunur.
+Görünümlerde neler yapılacak bir veri girilince bu veri nasıl işlencek 
+hepsin view.py içindeki kodlarla yapılır.
+DATABASE: verilerin tutulduğu kısımdır.
+Models.py database ile oluşturduğumuz model arasındaki bağlantıyı sağlıyor.
+
+####MODEL - VİEW - TEMPLATE####:(DJANGO MİMARİ YAPISI)
+**Django bu mimari yapıyı kullanır(MVT).
+-model.py-view.py ile iletişim halindedir. Ondan gelen verileri işler.
+-view.py - template ile iletişim halindedir. Ondan gelen verileri template ile gösterir.
+-template.py - user ile iletişim halindedir. Ondan alınan verileri view.py ve sırası ile database e dek gönderir.
+veya databaseden gelen verileri usera gönderir.
+###Redirect###
+Bir kullanıcıyı bir sayfadan başka bir sayfaya yönlendirme yöntemi
+
+#Template#
+Template klasörü oluşturulduktan sonra içine bir klasör daha oluşturulur.
+Bu klasörde html dosyaları tutulur.
+Ancak öncelikle template klasörünü os kütüphanesi yardımı ile django settings bölümünden
+Template kısmına yazılarak tanıtılır.(ChatGPT den yardım alınız. Detay için.)
+
+#Örneğin
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR,"template/")],# buraya template kütüphanesini os kütüphanesi yardımıyla ekledik.
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+(sonraki konuları diğer textde anlatacağım.:)
+
