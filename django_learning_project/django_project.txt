@@ -55,3 +55,32 @@ TEMPLATES = [
 ]
 (sonraki konuları diğer textde anlatacağım.:)
 
+#DJANGO Migrate
+python manage.py migrate şeklinde çalıştırılır.
+(bir migrate klasörü oluşur.)
+
+
+
+
+# APP tanıtma
+Bu tür tanıtma yani daha çok ayar işleri settings.py kısmında halledilir.
+Oluşturdğumuz App'i tanıtabilmek için oluşturulan app'in içindeki 
+apps.py dosyasında orda olan sınıf ismi ile beraber INSTALLED_APPS kısmına yazılır.
+
+class TemplatesAppConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'templates_app'
+
+name kısmındaki isim + sınıfın ismi
+INSTALLED_APPS = [
+    "templates_app.apps.TemplatesAppConfig",#apps.pydeki sınıf ismi ile beraber app tanıtılır.
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+ Ardından dosyalar save edildikten sonra 
+ python manage.py makemigrations templates_app şeklinde çalıştırılır.
+ Her şeyin senkronize olması için python manage.py migrate şeklinde çalıştırırız.
