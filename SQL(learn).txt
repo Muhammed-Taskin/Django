@@ -33,4 +33,4 @@ DELETE FROM tablo_ismi WHERE id=7;
 // Bana id'si 7 olan veriyi sil demektir.
 
 !!!NOT: Bunlar framework'lerde otomatik olarak çalışırlar.
-Bu yazıdaki amaç çalışma mantığını anlatmaktır.
+(Bu yazıdaki amaç çalışma mantığını anlatmaktır.)
