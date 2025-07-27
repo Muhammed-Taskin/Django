@@ -1,0 +1,33 @@
+!!! MIGRATIONS KOMUTALARI !!!
+
+Oluşturduğumuz dosyada migrations oluşturabilmek için
+python manage.py migrate komutunu çalıştırmamız gerekiyor.
+
+Ardından models.py dosyasına bir class oluşturduktan sonra bu classı djangonun bize
+hazırlaması için *** python manage.py makemigrations *** komutunu çalıştırıyoruz.
+
+EXM:
+    eğer models.py dosyasındaki kodları hazırlamak istiyorsak
+    python manage.py makemigrations application_name
+    yapıcaz.
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    Migrations for 'database_app':
+  database_app\migrations\0001_initial.py
+    + Create model MUsician
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+Şöyle bir çıktı dönünce hazır demektir.
+
+Bunun sonucunda migrations klasörü içerisinde bir py dosyası oluşur.
+SQL veri tabanına verilerin nasıl kaydedileceğini içerir. BU işlem otomatik olarak yapılır.
+
+!!! Çalışan database kodlarını görmek için ise:(GEREKLİ DEĞİLDİR!!!)
+
+python manage.py sqlmigrate app_name (migration_number)
+Kodu çalıştırılır: Terminalde SQL kodları görülür.
+
+SON OLARAK!!!!
+python manage.py migrate komutu ile migrate'imiz kaydedilir.
+
+
+
+!!! MIGRATIONS KOMUTALARI SONU !!!
