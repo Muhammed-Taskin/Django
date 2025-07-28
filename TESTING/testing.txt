@@ -1,0 +1,46 @@
+THE PRATICAL TEST PYRAMID(SOFTWARE TESTING PYRAMID diye aratabilirsiniz.)
+
+#Turkish
+Testing dediğimiz işlem aslında yazdığımız kodların doğru çalışıp
+çalışmadığını kontrol etmek için tasarlanan bir yapıdır.
+
+//En temelde üçe ayrılır:
+**UNIT TESTS
+**INTEGRATION TESTING
+**END-TO-END TESTING
+
+//UNIT TESTS
+En özelde fonksiyon kadar küçük kodları test ettiğimiz kod bloklarıdır.
+
+//END TO END TESTS
+**Kullanıcı arayüz ile etkileşimini test ederiz. (UI kısmını yani)
+**Örneğin; kullanıcı arayüzünde var olan bir buton çalışıyor mu gibi sorular
+**END TO END TESTS sahası içerisindedir.
+
+//INTEGRATION TESTS
+** Modüller arası test yaptığımızı düşünelim veya bir api dan veri çekiyoruz ver
+veri çekmek için doğal olarak  bir istekde bulunuyoruz. Bu bir çok fonksiyonun
+entegre bir şekilde çalışıp çalışmadığını kontrol eden testlere INTEGRATION TESTS denir. 
+
+// Peki testing neden önemlidir?
+Aslında ekip projelerinde bir çok commit yapılır. Proje büyüdükçe kim nerde ne değişiklik yaptı bilinmez.
+Bu sebeple yazılan testler projede yanlış yapılan değişikliklerin tespitinde önemli rol oynamaktadır.
+(TABİ BENİM AÇIMDAN EN ÖNEMLİ İŞLEVİ BU)
+#ENGLISH
+The testing process is essentially a structure designed to verify whether the code we write functions correctly.
+
+//Testing is divided into three categories:
+**UNIT TESTS
+**INTEGRATION TESTING
+**END-TO-END TESTING
+
+//UNIT TESTS
+The blocks of code we test are as small as the most specific function.
+
+//END-TO-END TESTS
+**We want you to test interaction with user frequencies. (For example, the user interface section.)
+**For example, questions like whether a button in the user interface works are within the scope of END-TO-END TESTS.
+
+//INTEGRATION TESTS
+** If we're planning to test across modules or pulling data from an API, we naturally request data pulls. 
+Tests that check whether these many functions work in an integrated manner are called INTEGRATION TESTS.
