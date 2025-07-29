@@ -25,6 +25,14 @@ SQL veri tabanına verilerin nasıl kaydedileceğini içerir. BU işlem otomatik
 python manage.py sqlmigrate app_name (migration_number)
 Kodu çalıştırılır: Terminalde SQL kodları görülür.
 
+Bunların temelde ne olduğunu şöyle kısaca açıklayayım:
+Her models aslında SQLde bir tabloya karşılık gelir.
+Modelsteki her alan SQLde bir sütuna ve her satır tablodaki bir kayda denk gelir.
+Burada oluşturduğumuz modelsleri de veritabanına(database'e) işleme kısmının
+senkronizasyonu ise migrate dediğimiz işlem ile halledilir.
+Çalışma prensibi az çok budur.
+
+
 SON OLARAK!!!!
 python manage.py migrate komutu ile migrate'imiz kaydedilir.
 
